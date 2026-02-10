@@ -3,5 +3,5 @@ package com.portfolio.model;
 public enum Role {
     ADMIN,
     PROGRAMMER,
-    EXTERNAL
+    USER
 }

@@ -120,7 +120,7 @@ public class AuthController {
                 .name(googleUser.name() != null ? googleUser.name() : googleUser.email())
                 .avatarUrl(googleUser.pictureUrl())
                 .firebaseUid(googleUser.uid())
-                .role(Role.EXTERNAL) // Default role for new users
+                .role(Role.USER) // Default role for new users
                 .isActive(true)
                 .build();
 
