@@ -43,7 +43,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     @Builder.Default
-    private Role role = Role.EXTERNAL;
+    private Role role = Role.USER;
 
     @Column(name = "is_active", nullable = false)
     @Builder.Default
