@@ -147,4 +147,18 @@ public class UserService {
                 .isActive(availability.getIsActive())
                 .build();
     }
+
+    public List<UserResponse> findByRole(Role role) {
+        return userRepository.findByRoleAndIsActiveTrue(role)
+                .stream()
+                .map(this::mapToResponse)
+                .toList();
+    }
+
+    public List<UserResponse> findAllActive() {
+        return userRepository.findByIsActiveTrue()
+                .stream()
+                .map(this::mapToResponse)
+                .toList();
+    }
 }
