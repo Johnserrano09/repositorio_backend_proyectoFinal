@@ -107,6 +107,28 @@ public class AuthController {
                 .build());
     }
 
+    @GetMapping("/me")
+    @Operation(summary = "Get current user", description = "Get authenticated user profile")
+    public ResponseEntity<?> getCurrentUser(@RequestHeader("Authorization") String bearerToken) {
+        try {
+            String token = bearerToken.replace("Bearer ", "");
+            String email = jwtService.extractEmail(token);
+            User user = userRepository.findByEmail(email)
+                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado"));
+            
+            return ResponseEntity.ok(AuthResponse.UserDto.builder()
+                    .id(user.getId().toString())
+                    .email(user.getEmail())
+                    .name(user.getName())
+                    .role(user.getRole().name())
+                    .avatarUrl(user.getAvatarUrl())
+                    .build());
+        } catch (Exception e) {
+            log.error("Error loading user profile: {}", e.getMessage());
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+    }
+
     @PostMapping("/logout")
     @Operation(summary = "Logout", description = "Revoke refresh token")
     public ResponseEntity<Void> logout(@Valid @RequestBody RefreshTokenRequest request) {

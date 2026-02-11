@@ -33,6 +33,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/health").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/public/**").permitAll()
+                        .requestMatchers("/api/users/role/**").permitAll()
 
                         // Swagger
                         .requestMatchers("/swagger-ui/**", "/swagger-ui.html", "/api-docs/**", "/v3/api-docs/**")
@@ -40,6 +41,8 @@ public class SecurityConfig {
 
                         // Admin only
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/api/users/**").hasRole("ADMIN")
+                        .requestMatchers("/api/users").hasRole("ADMIN")
 
                         // Programmer only
                         .requestMatchers("/api/programmer/**").hasRole("PROGRAMMER")
@@ -47,14 +50,7 @@ public class SecurityConfig {
                         // User only (previously EXTERNAL)
                         .requestMatchers("/api/external/**").hasRole("USER")
 
-                        // Users management - Admin or authenticated for read
-                        .requestMatchers("/api/users/role/**").permitAll()  // Public list of users by role
-                        .requestMatchers("/api/users").hasRole("ADMIN")  // Create/List all users
-                        .requestMatchers("/api/users/**").authenticated()  // Get/Update user
-
                         // Any authenticated user
-                        .requestMatchers("/api/user/**").authenticated()
-
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 

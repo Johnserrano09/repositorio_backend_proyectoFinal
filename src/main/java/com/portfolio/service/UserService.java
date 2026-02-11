@@ -65,18 +65,23 @@ public class UserService {
             throw new BadRequestException("Ya existe un usuario con ese email");
         }
 
+        // Use email as name if name is not provided
+        String userName = (request.getName() != null && !request.getName().isBlank()) 
+            ? request.getName() 
+            : request.getEmail().split("@")[0];
+
         User user = User.builder()
                 .email(request.getEmail())
-                .name(request.getName())
+                .name(userName)
                 .phone(request.getPhone())
                 .bio(request.getBio())
                 .avatarUrl(request.getAvatarUrl())
-                .role(request.getRole() != null ? request.getRole() : Role.PROGRAMMER)
+                .role(request.getRole() != null ? request.getRole() : Role.USER)
                 .isActive(true)
                 .build();
 
         User saved = userRepository.save(user);
-        log.info("Created user: {}", saved.getEmail());
+        log.info("Created user: {} with role: {}", saved.getEmail(), saved.getRole());
         return mapToResponse(saved);
     }
 

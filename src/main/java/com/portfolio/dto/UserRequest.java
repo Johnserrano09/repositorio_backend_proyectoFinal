@@ -14,12 +14,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UserRequest {
     @NotBlank(message = "El email es requerido")
-    @Email(message = "Email inválido")
-    private String email;
+    private String email;  // Removed @Email to allow more flexibility
 
-    @NotBlank(message = "El nombre es requerido")
-    private String name;
-
+    private String name;  // Optional
     private String phone;
     private String bio;
     private String avatarUrl;
