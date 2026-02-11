@@ -38,4 +38,10 @@ public class PublicController {
     public ResponseEntity<PortfolioResponse> getPortfolio(@PathVariable UUID id) {
         return ResponseEntity.ok(userService.getPortfolio(id));
     }
+
+    @GetMapping("/users/{id}")
+    @Operation(summary = "Get user", description = "Get user details by ID (including availability for programmers)")
+    public ResponseEntity<UserResponse> getUser(@PathVariable UUID id) {
+        return ResponseEntity.ok(userService.findById(id));
+    }
 }

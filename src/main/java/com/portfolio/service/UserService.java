@@ -113,6 +113,16 @@ public class UserService {
 
     private UserResponse mapToResponse(User user) {
         long projectCount = projectRepository.countByUserId(user.getId());
+        List<AvailabilityResponse> availabilities = null;
+        
+        // Incluir disponibilidades solo para programadores
+        if (user.getRole() == Role.PROGRAMMER) {
+            List<Availability> availabilityList = availabilityRepository.findByUserIdAndIsActiveTrue(user.getId());
+            availabilities = availabilityList.stream()
+                    .map(this::mapAvailabilityToResponse)
+                    .toList();
+        }
+        
         return UserResponse.builder()
                 .id(user.getId())
                 .email(user.getEmail())
@@ -124,6 +134,7 @@ public class UserService {
                 .isActive(user.getIsActive())
                 .createdAt(user.getCreatedAt())
                 .projectCount(projectCount)
+                .availability(availabilities)
                 .build();
     }
 
