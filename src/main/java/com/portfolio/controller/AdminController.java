@@ -2,7 +2,10 @@ package com.portfolio.controller;
 
 import com.portfolio.dto.UserRequest;
 import com.portfolio.dto.UserResponse;
+import com.portfolio.dto.AdvisoryResponse;
+import com.portfolio.model.AdvisoryStatus;
 import com.portfolio.service.UserService;
+import com.portfolio.service.AdvisoryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -24,6 +27,7 @@ import java.util.UUID;
 public class AdminController {
 
     private final UserService userService;
+    private final AdvisoryService advisoryService;
 
     @GetMapping("/programmers")
     @Operation(summary = "List all programmers", description = "Get paginated list of programmers (Admin only)")
@@ -62,5 +66,21 @@ public class AdminController {
     public ResponseEntity<Void> deleteProgrammer(@PathVariable UUID id) {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();
+    }
+
+    // ============ ADVISORIES ============
+
+    @GetMapping("/advisories")
+    @Operation(summary = "List all advisories", description = "Get paginated list of all advisories (Admin only)")
+    public ResponseEntity<Page<AdvisoryResponse>> listAdvisories(
+            @RequestParam(required = false) AdvisoryStatus status,
+            Pageable pageable) {
+        return ResponseEntity.ok(advisoryService.findAll(status, pageable));
+    }
+
+    @GetMapping("/advisories/{id}")
+    @Operation(summary = "Get advisory", description = "Get advisory by ID")
+    public ResponseEntity<AdvisoryResponse> getAdvisory(@PathVariable UUID id) {
+        return ResponseEntity.ok(advisoryService.findById(id));
     }
 }

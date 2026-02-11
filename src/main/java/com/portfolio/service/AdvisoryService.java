@@ -35,6 +35,15 @@ public class AdvisoryService {
     private final AvailabilityRepository availabilityRepository;
     private final NotificationService notificationService;
 
+    public Page<AdvisoryResponse> findAll(AdvisoryStatus status, Pageable pageable) {
+        if (status != null) {
+            return advisoryRepository.findByStatus(status, pageable)
+                    .map(this::mapToResponse);
+        }
+        return advisoryRepository.findAll(pageable)
+                .map(this::mapToResponse);
+    }
+
     public Page<AdvisoryResponse> findByProgrammerId(UUID programmerId, AdvisoryStatus status, Pageable pageable) {
         if (status != null) {
             return advisoryRepository.findByProgrammerIdAndStatus(programmerId, status, pageable)

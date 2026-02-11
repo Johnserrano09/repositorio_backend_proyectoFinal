@@ -19,6 +19,8 @@ public interface AdvisoryRepository extends JpaRepository<Advisory, UUID> {
 
     Page<Advisory> findByExternalId(UUID externalId, Pageable pageable);
 
+    Page<Advisory> findByStatus(AdvisoryStatus status, Pageable pageable);
+
     Page<Advisory> findByProgrammerIdAndStatus(UUID programmerId, AdvisoryStatus status, Pageable pageable);
 
     List<Advisory> findByProgrammerIdAndScheduledAtBetween(UUID programmerId, LocalDateTime start, LocalDateTime end);
