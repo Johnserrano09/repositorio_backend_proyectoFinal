@@ -8,6 +8,7 @@ import com.portfolio.model.User;
 import com.portfolio.repository.UserRepository;
 import com.portfolio.security.GoogleAuthService;
 import com.portfolio.security.JwtService;
+import com.portfolio.security.UserPrincipal;
 import com.portfolio.service.RefreshTokenService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -15,10 +16,11 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -109,12 +111,16 @@ public class AuthController {
 
     @GetMapping("/me")
     @Operation(summary = "Get current user", description = "Get authenticated user profile")
-    public ResponseEntity<?> getCurrentUser(@RequestHeader("Authorization") String bearerToken) {
+    public ResponseEntity<?> getCurrentUser(@AuthenticationPrincipal UserPrincipal principal) {
+        if (principal == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
         try {
-            String token = bearerToken.replace("Bearer ", "");
-            String email = jwtService.extractEmail(token);
-            User user = userRepository.findByEmail(email)
+            User user = userRepository.findById(principal.getId())
                     .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado"));
+            
+            log.info("User {} requested profile", user.getEmail());
             
             return ResponseEntity.ok(AuthResponse.UserDto.builder()
                     .id(user.getId().toString())
@@ -123,9 +129,12 @@ public class AuthController {
                     .role(user.getRole().name())
                     .avatarUrl(user.getAvatarUrl())
                     .build());
+        } catch (ResponseStatusException e) {
+            log.error("Error loading user profile: {}", e.getMessage());
+            return ResponseEntity.status(e.getStatusCode()).build();
         } catch (Exception e) {
             log.error("Error loading user profile: {}", e.getMessage());
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 

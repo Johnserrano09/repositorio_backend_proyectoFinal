@@ -31,18 +31,24 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         // Public endpoints
                         .requestMatchers("/api/health").permitAll()
-                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/auth/google", "/api/auth/refresh", "/api/auth/logout").permitAll()
                         .requestMatchers("/api/public/**").permitAll()
                         .requestMatchers("/api/users/role/**").permitAll()
+                        .requestMatchers("/api/users/email/**").permitAll()
+                        .requestMatchers("/api/users/{id}").permitAll()
 
                         // Swagger
                         .requestMatchers("/swagger-ui/**", "/swagger-ui.html", "/api-docs/**", "/v3/api-docs/**")
                         .permitAll()
 
+                        // Auth endpoints - requires authentication
+                        .requestMatchers("/api/auth/me").authenticated()
+
                         // Admin only
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/users/**").hasRole("ADMIN")
                         .requestMatchers("/api/users").hasRole("ADMIN")
+                        .requestMatchers("PUT", "/api/users/**").hasRole("ADMIN")
+                        .requestMatchers("DELETE", "/api/users/**").hasRole("ADMIN")
 
                         // Programmer only
                         .requestMatchers("/api/programmer/**").hasRole("PROGRAMMER")
