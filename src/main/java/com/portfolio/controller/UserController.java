@@ -42,6 +42,13 @@ public class UserController {
         return ResponseEntity.ok(userService.findAllActive());
     }
 
+    @PostMapping
+    @Operation(summary = "Create user", description = "Create a new user")
+    @SecurityRequirement(name = "Bearer Authentication")
+    public ResponseEntity<UserResponse> createUser(@RequestBody UserRequest request) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(request));
+    }
+
     @GetMapping("/{id}")
     @Operation(summary = "Get user", description = "Get user by ID")
     public ResponseEntity<UserResponse> getUserById(@PathVariable String id) {
