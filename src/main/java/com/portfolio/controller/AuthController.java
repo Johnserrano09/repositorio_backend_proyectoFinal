@@ -16,6 +16,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -39,7 +41,7 @@ public class AuthController {
         log.info("Processing Google authentication request");
 
         var googleUser = googleAuthService.verifyIdToken(request.getIdToken())
-                .orElseThrow(() -> new RuntimeException("Token de Google inválido"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token de Google inválido"));
 
         // Find or create user
         User user = userRepository.findByEmail(googleUser.email())

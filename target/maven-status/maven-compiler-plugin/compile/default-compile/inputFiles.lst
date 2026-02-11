@@ -1,58 +1,63 @@
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\exception\GlobalExceptionHandler.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\Project.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\AdvisoryStatus.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\Advisory.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\PortfolioResponse.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\ProjectStatus.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\UserRepository.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\ReportController.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\config\OpenApiConfig.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\NotificationLogRepository.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\UserService.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\AdvisoryService.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\scheduler\AdvisoryReminderScheduler.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\UserRequest.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\DashboardService.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\PublicController.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AuthResponse.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\PortfolioApplication.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\security\JwtService.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\DashboardStats.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\ProjectRepository.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\AdvisoryRepository.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\AdminController.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\security\GoogleAuthService.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\NotificationStatus.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\Role.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\GoogleAuthRequest.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\ProjectRequest.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\AvailabilityService.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\ReportService.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\User.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AdvisoryRequest.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\NotificationLog.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\NotificationService.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\exception\ResourceNotFoundException.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\NotificationType.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\ExternalController.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\security\JwtAuthenticationFilter.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\ProjectResponse.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\security\UserPrincipal.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\package-info.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\config\SecurityConfig.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\UserResponse.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\ProjectType.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\ProgrammerDashboardController.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\AuthController.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\Availability.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\config\CorsConfig.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AdvisoryActionRequest.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\AdminDashboardController.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\AvailabilityRepository.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\exception\BadRequestException.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\HealthController.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\ProgrammerController.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AdvisoryResponse.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\ProjectService.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AvailabilityRequest.java
-C:\Users\MSI\Desktop\Integrador pww\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AvailabilityResponse.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\UserResponse.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\NotificationStatus.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\ProjectResponse.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\AdvisoryStatus.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\NotificationType.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\ExternalController.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AdvisoryRequest.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\scheduler\AdvisoryReminderScheduler.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\NotificationService.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\exception\BadRequestException.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\exception\GlobalExceptionHandler.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\security\JwtService.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\config\OpenApiConfig.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AvailabilityResponse.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\RefreshTokenRepository.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\config\CorsConfig.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\AdvisoryRepository.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AdvisoryActionRequest.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\UserService.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\DashboardStats.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\User.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\RefreshToken.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\security\UserPrincipal.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\Project.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\ProjectType.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\HealthController.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\RefreshTokenRequest.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\NotificationLog.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\ProgrammerController.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AvailabilityRequest.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\package-info.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\ProjectRequest.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\Role.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\NotificationLogRepository.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AuthResponse.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\AuthController.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\ReportController.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\AdvisoryResponse.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\UserRequest.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\exception\ResourceNotFoundException.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\ProjectStatus.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\PortfolioApplication.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\GoogleAuthRequest.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\Advisory.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\ProgrammerDashboardController.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\ProjectService.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\model\Availability.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\ProjectRepository.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\AdvisoryService.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\AdminReportController.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\dto\PortfolioResponse.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\UserRepository.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\repository\AvailabilityRepository.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\config\SecurityConfig.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\ReportService.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\RefreshTokenService.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\PublicController.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\security\JwtAuthenticationFilter.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\AdminDashboardController.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\controller\AdminController.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\DashboardService.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\security\GoogleAuthService.java
+C:\Users\abima\Downloads\porfafolio-ramon-serrano\backend\src\main\java\com\portfolio\service\AvailabilityService.java
