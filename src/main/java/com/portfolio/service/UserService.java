@@ -161,4 +161,38 @@ public class UserService {
                 .map(this::mapToResponse)
                 .toList();
     }
+
+    public UserResponse findByEmailResponse(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("Usuario", "email", email));
+        return mapToResponse(user);
+    }
+
+    public UserResponse updateUserByEmail(String email, UserRequest request) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("Usuario", "email", email));
+
+        user.setName(request.getName());
+        user.setPhone(request.getPhone());
+        user.setBio(request.getBio());
+        user.setAvatarUrl(request.getAvatarUrl());
+
+        if (request.getRole() != null) {
+            user.setRole(request.getRole());
+        }
+
+        User saved = userRepository.save(user);
+        log.info("Updated user by email: {}", saved.getEmail());
+        return mapToResponse(saved);
+    }
+
+    public UserResponse updateUserRoleByEmail(String email, Role role) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("Usuario", "email", email));
+
+        user.setRole(role);
+        User saved = userRepository.save(user);
+        log.info("Updated role for user: {} to {}", saved.getEmail(), role);
+        return mapToResponse(saved);
+    }
 }
