@@ -7,6 +7,7 @@ import com.portfolio.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -45,7 +46,7 @@ public class UserController {
     @PostMapping
     @Operation(summary = "Create user", description = "Create a new user")
     @SecurityRequirement(name = "Bearer Authentication")
-    public ResponseEntity<UserResponse> createUser(@RequestBody UserRequest request) {
+    public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(request));
     }
 

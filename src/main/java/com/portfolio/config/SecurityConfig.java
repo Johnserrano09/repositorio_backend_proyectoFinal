@@ -44,8 +44,13 @@ public class SecurityConfig {
                         // Programmer only
                         .requestMatchers("/api/programmer/**").hasRole("PROGRAMMER")
 
-                        // External only
-                        .requestMatchers("/api/external/**").hasRole("EXTERNAL")
+                        // User only (previously EXTERNAL)
+                        .requestMatchers("/api/external/**").hasRole("USER")
+
+                        // Users management - Admin or authenticated for read
+                        .requestMatchers("/api/users/role/**").permitAll()  // Public list of users by role
+                        .requestMatchers("/api/users").hasRole("ADMIN")  // Create/List all users
+                        .requestMatchers("/api/users/**").authenticated()  // Get/Update user
 
                         // Any authenticated user
                         .requestMatchers("/api/user/**").authenticated()
